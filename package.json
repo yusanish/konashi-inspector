@@ -10,10 +10,12 @@
   "author": "Yusaku Nishiwaki",
   "license": "Apache-2.0",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.1",
     "@ux-xu/konashi-web-bluetooth": "^0.2.0",
     "bulma": "^0.8.0",
     "preact": "^10.3.4",
-    "ress": "^2.0.4"
+    "ress": "^2.0.4",
+    "rfs": "^9.0.2"
   },
   "devDependencies": {
     "@types/jest": "^25.1.4",

@@ -3,8 +3,9 @@ import { useState } from "preact/hooks";
 import KonashiContext from "./KonashiContext";
 import Konashi from "@ux-xu/konashi-web-bluetooth";
 
-import ConnectBtn from "./ConnectBtn";
+import Header from "./Header";
 import Main from "./Main";
+import Navbar from "./Navbar";
 
 const App = () => {
   const [konashi, setKonashi] = useState<Konashi | null>(null);
@@ -13,10 +14,10 @@ const App = () => {
   return (
     <div className="app">
       <KonashiContext.Provider value={container}>
-        <ConnectBtn />
+        <Header />
         <Main />
       </KonashiContext.Provider>
-      {/* Tab */}
+      <Navbar />
     </div>
   );
 };

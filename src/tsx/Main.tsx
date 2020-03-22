@@ -5,7 +5,7 @@ import { useContext } from "preact/hooks";
 const Main = () => {
   const { konashi } = useContext(KonashiContext);
 
-  return <div>{konashi}</div>;
+  return <div className="ly_main">{konashi}</div>;
 };
 
 export default Main;
