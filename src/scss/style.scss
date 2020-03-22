@@ -1,0 +1,25 @@
+@import "../../node_modules/bulma/sass/utilities/_all.sass";
+@import "../../node_modules/bulma/sass/elements/button.sass";
+
+.el_connectBtn {
+  @extend .button; // bulma button element extended
+  color: #4D4D4D;
+  border: solid 1px #4D4D4D;
+  background-color: #ffffff;
+  transition: 0.4s;
+
+  &:hover {
+    color: #ffffff;
+    background-color: #4D4D4D;
+  }
+
+  &.isConnected {
+    color: #50D926;
+    border: solid 1px #50D926;
+
+    &:hover {
+      color: #ffffff;
+      background-color: #50D926;
+    }
+  }
+}
