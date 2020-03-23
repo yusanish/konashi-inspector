@@ -23,4 +23,4 @@ class t{static get HIGH(){return 1}static get LOW(){return 0}static get OUTPUT()
 },{}],"zo2T":[function(require,module,exports) {
 "use strict";var e=require("preact"),r=s(require("./tsx/App"));function s(e){return e&&e.__esModule?e:{default:e}}require("ress"),require("./scss/style.scss");var t=document.getElementById("root");(0,e.render)((0,e.h)(r.default,null),t);
 },{"preact":"aSor","./tsx/App":"ONNq","ress":"Mhc4","./scss/style.scss":"Mhc4"}]},{},["zo2T"], null)
-//# sourceMappingURL=/konashi-inspector/src.cabb6386.js.map
+//# sourceMappingURL=/konashi-inspector/src.c2420a13.js.map

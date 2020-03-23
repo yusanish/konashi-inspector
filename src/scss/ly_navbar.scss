@@ -1,0 +1,46 @@
+@import "../../node_modules/rfs/scss.scss";
+
+.ly_navbar {
+  background-color: #333333;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+
+  &_inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+    & .bl_navbarItem {
+      color: #e5e5e5;
+      width: 100%;
+      text-align: center;
+
+      &:before {
+        content: "";
+        display: block;
+        height: 5px;
+        width: 100%;
+        margin-bottom: 7px;
+        border-radius: 0 0 2px 2px;
+        background-color: #333333;
+      }
+    }
+  }
+}
+
+.bl_navbarItem {
+  padding: 0 0 5px;
+
+  &_text {
+    @include font-size(0.9rem);
+  }
+
+  &.selected {
+    color: greenyellow;
+
+    &:before {
+      background-color: #e5e5e5;
+    }
+  }
+}
