@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "parcel src/index.html --open",
-    "build": "parcel build src/index.html",
+    "build": "rm docs/*; parcel build src/index.html --out-dir docs/; touch docs/.nojekyll",
     "test": "jest"
   },
   "author": "Yusaku Nishiwaki",
