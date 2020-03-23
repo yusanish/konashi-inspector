@@ -10,14 +10,19 @@ import Navbar from "./Navbar";
 const App = () => {
   const [konashi, setKonashi] = useState<Konashi | null>(null);
   const container = { konashi, setKonashi };
+  const [currentTab, setCurrentTab] = useState<string>("info");
 
   return (
     <div className="app">
       <KonashiContext.Provider value={container}>
         <Header />
-        <Main />
       </KonashiContext.Provider>
-      <Navbar />
+
+      <KonashiContext.Provider value={container}>
+        <Main current={currentTab} />
+      </KonashiContext.Provider>
+
+      <Navbar current={currentTab} setCurrent={setCurrentTab} />
     </div>
   );
 };

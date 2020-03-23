@@ -67,7 +67,6 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-around;
-    padding: 10px 0 5px;
 
     & .bl_navbarItem {
       color: #E5E5E5;
@@ -78,11 +77,13 @@ body {
 }
 
 .bl_navbarItem {
-  &_icon {
-    padding: 2px 0;
-  }
+  padding: 10px 0 5px;
 
   &_text {
-    @include font-size(1rem);
+    @include font-size(0.9rem);
+  }
+
+  &.selected {
+    color: greenyellow;
   }
 }

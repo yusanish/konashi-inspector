@@ -1,19 +1,59 @@
 import { h } from "preact";
-import NavbarItem from "./NavbarItem";
+import { NavbarItem, NavbarContent } from "./NavbarItem";
+import { useState } from "preact/hooks";
 
-// TODO: isActive ハンドリング
-// できたら、リストで繰り返し処理で書く
+export const NavbarContents: NavbarContent[] = [
+  {
+    id: "info",
+    text: "info",
+    icon: "fa-info"
+  },
+  {
+    id: "pio",
+    text: "PIO",
+    icon: "fa-adjust"
+  },
+  {
+    id: "pwm",
+    text: "PWM",
+    icon: "fa-wave-square"
+  },
+  {
+    id: "aio",
+    text: "AIO",
+    icon: "fa-tachometer-alt"
+  },
+  {
+    id: "more",
+    text: "more",
+    icon: "fa-bars"
+  }
+];
 
-const Navbar = () => {
+const Navbar = (props: {current: string, setCurrent: (arg0: string) => void }) => {
+
+  const handleClick = (event: MouseEvent) => {
+    const element = event.currentTarget as Element; // https://stackoverflow.com/questions/28900077
+    const currentId = element.getAttribute('name');
+    props.setCurrent(currentId !== null ? currentId : "info");
+  };
+
+  const navbarItems = NavbarContents.map(item => {
+    return (
+      <NavbarItem
+        key={item.id}
+        id={item.id}
+        icon={item.icon}
+        text={item.text}
+        current={props.current}
+        onClick={handleClick}
+      />
+    );
+  });
+
   return (
     <div className="ly_navbar">
-      <div className="ly_navbar_inner">
-        <NavbarItem iconClass="fa-info" displayText="info" />
-        <NavbarItem iconClass="fa-adjust" displayText="PIO" />
-        <NavbarItem iconClass="fa-wave-square" displayText="PWM" />
-        <NavbarItem iconClass="fa-tachometer-alt" displayText="AIO" />
-        <NavbarItem iconClass="fa-bars" displayText="more" />
-      </div>
+      <div className="ly_navbar_inner">{navbarItems}</div>
     </div>
   );
 };
