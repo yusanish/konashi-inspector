@@ -1,0 +1,25 @@
+@import "../../node_modules/rfs/scss.scss";
+
+.bl_info {
+  padding: 5% 0;
+}
+
+.bl_infoList {
+  margin: 0 5% 0 5%;
+  list-style: none;
+  @include font-size(1.1rem);
+}
+
+.bl_infoItem {
+  margin-bottom: 5px;
+
+  &_label {
+    display: inline-block;
+    font-weight: bold;
+    width: 80px;
+  }
+
+  &_data {
+    display: inline-block;
+  }
+}

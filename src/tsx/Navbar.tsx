@@ -1,6 +1,5 @@
 import { h } from "preact";
 import { NavbarItem, NavbarContent } from "./NavbarItem";
-import { useState } from "preact/hooks";
 
 export const NavbarContents: NavbarContent[] = [
   {
@@ -30,11 +29,13 @@ export const NavbarContents: NavbarContent[] = [
   }
 ];
 
-const Navbar = (props: {current: string, setCurrent: (arg0: string) => void }) => {
-
+const Navbar = (props: {
+  current: string;
+  setCurrent: (arg0: string) => void;
+}) => {
   const handleClick = (event: MouseEvent) => {
     const element = event.currentTarget as Element; // https://stackoverflow.com/questions/28900077
-    const currentId = element.getAttribute('name');
+    const currentId = element.getAttribute("name");
     props.setCurrent(currentId !== null ? currentId : "info");
   };
 
