@@ -2,7 +2,7 @@
 
 .bl_valueToggleBtn {
   width: 60%;
-  height: 50px;
+  height: 45px;
   max-width: 100px;
 
   &.input {
@@ -24,9 +24,10 @@
   position: relative;
   transition: all 0.2s ease-in-out;
   color: #4d4d4d;
+  line-height: 32px;
 
   &.input {
-    border: none;
+    border: solid 0px #4d4d4d;
   }
 
   &.output {

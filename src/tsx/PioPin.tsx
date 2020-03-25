@@ -4,7 +4,7 @@ import Konashi from "@ux-xu/konashi-web-bluetooth";
 import ModeToggleBtn from "./ModeToggleBtn";
 import ValueToggleBtn from "./ValueToggleBtn";
 
-const PioPin = (props: { pinNumber: number }) => {
+const PioPin = (props: { pinNumber: number; inputValue: number }) => {
   const [mode, setMode] = useState(Konashi.INPUT);
   const [value, setValue] = useState(Konashi.LOW);
   const [pullup, setPullup] = useState(Konashi.NO_PULLS);
@@ -16,7 +16,13 @@ const PioPin = (props: { pinNumber: number }) => {
         <ModeToggleBtn pid={props.pinNumber} mode={mode} setMode={setMode} />
       </div>
       <div className="bl_pioPin_value">
-        <ValueToggleBtn pid={props.pinNumber} mode={mode} value={value} setValue={setValue} />
+        <ValueToggleBtn
+          pid={props.pinNumber}
+          mode={mode}
+          value={value}
+          setValue={setValue}
+          inputValue={props.inputValue}
+        />
       </div>
       <div className="bl_pioPin_pullup">
         {/* {pullup} */}

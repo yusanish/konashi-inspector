@@ -1,11 +1,17 @@
 @import "../../node_modules/rfs/scss.scss";
 @import "./bl_ModeToggleBtn.scss";
 @import "./bl_ValueToggleBtn.scss";
+@import "./el_startInputNotifyBtn.scss";
+
+.bl_pio {
+  text-align: center;
+}
 
 .bl_pioPin {
   display: flex;
   text-align: center;
   border-bottom: 1px solid;
+  padding: 2px 2%;
 
   &_id {
     flex-basis: 10%;
@@ -24,4 +30,3 @@
     flex-basis: 30%;
   }
 }
-

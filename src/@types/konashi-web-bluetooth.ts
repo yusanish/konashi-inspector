@@ -70,7 +70,7 @@ declare module "@ux-xu/konashi-web-bluetooth" {
     digitalWriteAll(values: number): Promise<void>;
     digitalRead(pin: number): Promise<number>;
     startDigitalInputNotification(
-      callback: (arg0: number) => {}
+      callback: (arg0: number) => void
     ): Promise<void>;
     stopDigitalInputNotification(): Promise<void>;
     // close Digital I/O }

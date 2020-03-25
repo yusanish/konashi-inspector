@@ -8,6 +8,7 @@ const ValueToggleBtn = (props: {
   mode: number;
   value: number;
   setValue: (arg0: number) => void;
+  inputValue: number;
 }) => {
   const { konashi } = useContext(KonashiContext);
 
@@ -28,15 +29,22 @@ const ValueToggleBtn = (props: {
     return classText;
   };
 
-  const displayValue = (v: number) => {
-    return v === Konashi.LOW ? "LOW" : "HIGH";
+  const displayValue = () => {
+    if (props.mode === Konashi.OUTPUT) {
+      return props.value === Konashi.LOW ? "LOW" : "HIGH";
+    } else {
+      // INPUT
+      const input = (props.inputValue >> props.pid) & 0x01;
+      props.setValue(input);
+      return input === Konashi.LOW ? "LOW" : "HIGH";
+    }
   };
 
   const handleClick = async () => {
     if (props.mode === Konashi.OUTPUT) {
       props.setValue(props.value !== Konashi.LOW ? Konashi.LOW : Konashi.HIGH);
 
-      const value = props.value !== Konashi.LOW ? Konashi.LOW : Konashi.HIGH
+      const value = props.value !== Konashi.LOW ? Konashi.LOW : Konashi.HIGH;
       await konashi?.digitalWrite(props.pid, value);
     }
   };
@@ -44,9 +52,7 @@ const ValueToggleBtn = (props: {
   return (
     <button className={"bl_valueToggleBtn " + setClass()} onClick={handleClick}>
       <div className="bl_valueToggleBtn_inner">
-        <div className={"el_valueDisplay " + setClass()}>
-          {displayValue(props.value)}
-        </div>
+        <div className={"el_valueDisplay " + setClass()}>{displayValue()}</div>
       </div>
     </button>
   );

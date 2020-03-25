@@ -1,12 +1,10 @@
 import { h } from "preact";
-import PioPin from "./PioPin";
 import { useState } from "preact/hooks";
-// import StartNotifyBtn from "./StartNotifyBtn";
+import PioPin from "./PioPin";
+import StartInputNotifyBtn from "./StartInputNotifyBtn";
 
 const PIO = () => {
-  const [inputValue, setInputValue] = useState(0x00);
-
-  const updateNotifyInput = () => {};
+  const [inputValue, setInputValue] = useState<number>(0x00);
 
   return (
     <div className="bl_pio">
@@ -17,14 +15,16 @@ const PIO = () => {
           <div className="bl_pioPin_value">Value</div>
           <div className="bl_pioPin_pullup"></div>
         </div>
-        <PioPin pinNumber={0} />
-        <PioPin pinNumber={1} />
-        <PioPin pinNumber={2} />
-        <PioPin pinNumber={3} />
-        <PioPin pinNumber={4} />
-        <PioPin pinNumber={5} />
-        <PioPin pinNumber={6} />
+        <PioPin pinNumber={0} inputValue={inputValue}/>
+        <PioPin pinNumber={1} inputValue={inputValue}/>
+        <PioPin pinNumber={2} inputValue={inputValue}/>
+        <PioPin pinNumber={3} inputValue={inputValue}/>
+        <PioPin pinNumber={4} inputValue={inputValue}/>
+        <PioPin pinNumber={5} inputValue={inputValue}/>
+        <PioPin pinNumber={6} inputValue={inputValue}/>
       </div>
+
+      <StartInputNotifyBtn setInputValue={setInputValue} />
     </div>
   );
 };
