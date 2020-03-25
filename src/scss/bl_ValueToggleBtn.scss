@@ -1,0 +1,47 @@
+@import "../../node_modules/rfs/scss.scss";
+
+.bl_valueToggleBtn {
+  width: 60%;
+  height: 50px;
+  max-width: 100px;
+
+  &.input {
+    pointer-events: none;
+  }
+
+  &.output {
+    pointer-events: auto;
+  }
+
+  &_inner {
+    position: relative;
+    text-align: center;
+  }
+}
+
+.el_valueDisplay {
+  border-radius: 5px;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  color: #4d4d4d;
+
+  &.input {
+    border: none;
+  }
+
+  &.output {
+    border: solid 2px #4d4d4d;
+
+    &:hover {
+      box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2); 
+    }
+  }
+
+  &.low {
+    background: #ffffff;
+  }
+
+  &.high {
+    background: #fcadb8;
+  }
+}

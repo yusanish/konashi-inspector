@@ -1,0 +1,27 @@
+@import "../../node_modules/rfs/scss.scss";
+@import "./bl_ModeToggleBtn.scss";
+@import "./bl_ValueToggleBtn.scss";
+
+.bl_pioPin {
+  display: flex;
+  text-align: center;
+  border-bottom: 1px solid;
+
+  &_id {
+    flex-basis: 10%;
+    margin: auto;
+  }
+
+  &_ioToggle {
+    flex-basis: 30%;
+  }
+
+  &_value {
+    flex-basis: 30%;
+  }
+
+  &_pullup {
+    flex-basis: 30%;
+  }
+}
+

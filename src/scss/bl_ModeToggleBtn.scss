@@ -1,0 +1,50 @@
+@import "../../node_modules/rfs/scss.scss";
+
+.bl_ModeToggleBtn {
+  width: 60%;
+  height: 50px;
+  max-width: 100px;
+
+  &_inner {
+    position: relative;
+    text-align: center;
+
+    &:before {
+      content: "";
+      position: absolute;
+      border-top: 2px solid;
+      top: 50%;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 100%;
+    }
+  }
+}
+
+.el_ModeBox {
+  $box-width: 25px;
+
+  border: solid 2px #4d4d4d;
+  border-radius: 5px;
+  width: $box-width;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+
+  &.input {
+    color: #4d4d4d;
+    background: #ffffff;
+    margin-left: 0;
+    left: 0%;
+    padding: 0 1px 2px 0;
+  }
+
+  &.output {
+    color: #ffffff;
+    background: #4d4d4d;
+    margin-left: -$box-width;
+    left: 100%;
+    padding: 0 0 2px 1px;
+  }
+}
+
