@@ -3,8 +3,9 @@
 .ly_navbar {
   background-color: #333333;
   width: 100%;
-  position: absolute;
+  position: fixed;
   bottom: 0;
+  z-index: 2;
 
   &_inner {
     width: 100%;

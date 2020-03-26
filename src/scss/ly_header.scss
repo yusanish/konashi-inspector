@@ -1,6 +1,12 @@
 @import "../../node_modules/rfs/scss.scss";
 @import "./el_connectBtn.scss";
 
+.ly_header_wrapper {
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+
 .ly_header {
   background-color: #CCCCCC;
   padding: 10px 10px;

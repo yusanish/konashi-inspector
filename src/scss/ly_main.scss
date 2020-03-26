@@ -1,3 +1,14 @@
 @import "./bl_info.scss";
 @import "./bl_pio.scss";
 
+.ly_main {
+  padding-top: 55px;
+  padding-bottom: 72px;
+  z-index: 1;
+
+  &_inner {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+  }
+}
