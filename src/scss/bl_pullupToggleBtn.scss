@@ -1,0 +1,28 @@
+@import "../../node_modules/rfs/scss.scss";
+
+.bl_PullupToggleBtn {
+  &_inner {
+    position: relative;
+    text-align: center;
+  }
+}
+
+.el_pullupIcon {
+  // how-to-center-text-vertically-with-a-large-font-awesome-icon
+  // https://stackoverflow.com/questions/17309928/
+
+  display: inline-flex; /* make element size relative to content */
+  align-items: center; /* vertical alignment of items */
+  line-height: 10px; /* vertically size by height, line-height or padding */
+
+  & p {
+    @include font-size(0.9rem);
+    display: block;
+    margin-right: 4px;
+  }
+
+  & i {
+    padding-top: 2px;
+    @include font-size(1.4rem);
+  }
+}

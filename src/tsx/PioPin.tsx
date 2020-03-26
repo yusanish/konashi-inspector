@@ -3,6 +3,7 @@ import { useState } from "preact/hooks";
 import Konashi from "@ux-xu/konashi-web-bluetooth";
 import ModeToggleBtn from "./ModeToggleBtn";
 import ValueToggleBtn from "./ValueToggleBtn";
+import PullupToggleBtn from "./PullupToggleBtn";
 
 const PioPin = (props: { pinNumber: number; inputValue: number }) => {
   const [mode, setMode] = useState(Konashi.INPUT);
@@ -25,8 +26,11 @@ const PioPin = (props: { pinNumber: number; inputValue: number }) => {
         />
       </div>
       <div className="bl_pioPin_pullup">
-        {/* {pullup} */}
-        {/* props: pullup, setPullup */}
+        <PullupToggleBtn
+          pid={props.pinNumber}
+          pullup={pullup}
+          setPullup={setPullup}
+        />
       </div>
     </div>
   );
