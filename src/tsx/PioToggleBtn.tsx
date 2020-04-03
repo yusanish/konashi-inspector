@@ -3,7 +3,7 @@ import { useContext } from "preact/hooks";
 import KonashiContext from "./KonashiContext";
 import Konashi from "@ux-xu/konashi-web-bluetooth";
 
-const ModeToggleBtn = (props: {
+const PioToggleBtn = (props: {
   pid: number;
   mode: number;
   setMode: (arg0: number) => void;
@@ -38,4 +38,4 @@ const ModeToggleBtn = (props: {
   );
 };
 
-export default ModeToggleBtn;
+export default PioToggleBtn;

@@ -1,0 +1,34 @@
+@import "../../node_modules/rfs/scss.scss";
+
+.el_sliderInput {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #6d6d6d;
+  height: 5px;
+  width: 100%;
+  border-radius: 3px;
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    position: relative;
+    border: 2px solid #4d4d4d;
+    width: 24px;
+    height: 24px;
+    display: block;
+    background-color: #fff;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+  }
+
+  &:active::-webkit-slider-thumb {
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, .2);
+    transition: .2s;
+  }
+}

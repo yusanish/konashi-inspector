@@ -19,7 +19,7 @@ export const NavbarContents: NavbarContent[] = [
   },
   {
     id: "aio",
-    text: "AIO",
+    text: "Analog",
     icon: "fa-tachometer-alt"
   },
   {

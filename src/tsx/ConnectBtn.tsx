@@ -6,7 +6,7 @@ import Konashi from "@ux-xu/konashi-web-bluetooth";
 const ConnectBtn = () => {
   const [message, setMessage]: [string, Function] = useState("connect");
   const [classExtra, setClassExtra]: [string, Function] = useState("");
-  const {konashi, setKonashi} = useContext(KonashiContext);
+  const { konashi, setKonashi } = useContext(KonashiContext);
 
   const handleConnection = async (e: Event) => {
     e.preventDefault();

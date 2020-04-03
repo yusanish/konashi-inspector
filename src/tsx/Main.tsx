@@ -3,6 +3,8 @@ import { useContext } from "preact/hooks";
 import KonashiContext from "./KonashiContext";
 import Info from "./Info";
 import PIO from "./PIO";
+import PWM from "./PWM";
+import AIO from "./AIO";
 
 const Main = (props: { current: string }) => {
   const { konashi } = useContext(KonashiContext);
@@ -17,14 +19,13 @@ const Main = (props: { current: string }) => {
   const selectRenderItem = (selected: string) => {
     switch (selected) {
       case "info":
-        return <Info />
+        return <Info />;
       case "pio":
-        return <PIO />
-        break;
+        return <PIO />;
       case "pwm":
-        break;
+        return <PWM />;
       case "aio":
-        break;
+        return <AIO />;
       case "more":
         break;
       default:

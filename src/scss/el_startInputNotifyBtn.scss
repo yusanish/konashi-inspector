@@ -15,10 +15,11 @@
   }
 
   &.start {
-    background: #fcadb8;
+    border: solid 2px #4c4c4c;
   }
 
   &.stop {
-    background: #adc6fc;
+    background: #fcadb8;
+    border: solid 2px #4c4c4c;
   }
 }

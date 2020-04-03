@@ -1,0 +1,17 @@
+@import "../../node_modules/rfs/scss.scss";
+@import "./el_sliderInput.scss";
+@import "./el_textInput.scss";
+
+.bl_inputLED {
+  display: flex;
+  flex-direction: row;
+
+  &_slider {
+    margin: auto;
+    padding: 0 4px 0 10px;
+  }
+
+  &_text {
+    padding: 6px 5px 0;
+  }
+}

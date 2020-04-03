@@ -1,0 +1,53 @@
+@import "../../node_modules/rfs/scss.scss";
+@import "./el_button.scss";
+
+.bl_aio {
+  padding-top: 4px;
+  text-align: center;
+
+  &>p {
+    margin-top: 10px;
+  }
+}
+
+.bl_aioPin {
+  display: flex;
+  text-align: center;
+  border-bottom: 1px solid;
+  padding: 2px 2%;
+
+  &_id {
+    flex-basis: 20%;
+    margin: auto;
+  }
+
+  &_input {
+    flex-basis: 40%;
+  }
+
+  &_value {
+    flex-basis: 40%;
+    padding-right: 10px;
+    margin: auto;
+  }
+}
+
+.bl_analogReadBtn {
+  width: 60%;
+  height: 45px;
+  max-width: 100px;
+
+  &_inner {
+    position: relative;
+    text-align: center;
+  }
+
+  & .el_button {
+    border: solid 2px #4d4d4d;
+
+    &:hover {
+      color: #4d4d4d;
+      background-color: #fcadb8;
+    }
+  }
+}

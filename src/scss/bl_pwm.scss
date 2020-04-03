@@ -1,0 +1,34 @@
+@import "../../node_modules/rfs/scss.scss";
+@import "./bl_pwmToggleBtn.scss";
+@import "./bl_pwmLedInput.scss";
+
+.bl_pwm {
+  padding-top: 4px;
+  text-align: center;
+}
+
+.bl_pwmPin {
+  display: flex;
+  text-align: center;
+  border-bottom: 1px solid;
+  padding: 2px 2%;
+
+  &_id {
+    flex-basis: 10%;
+    margin: auto;
+  }
+
+  &_toggle {
+    flex-basis: 25%;
+    margin-left: 10px;
+  }
+
+  &_value {
+    flex-basis: 65%;
+
+    &>p {
+      padding-top: 8px;
+      margin: auto;
+    }
+  }
+}
