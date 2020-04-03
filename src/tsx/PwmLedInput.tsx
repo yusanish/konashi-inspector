@@ -24,7 +24,6 @@ const PwmLedInput = (props: {
   }: JSX.TargetedEvent<HTMLInputElement, Event>) => {
     const value: number = parseInt(currentTarget.value);
     props.setValue(value > 100 ? 100 : value < 0 ? 0 : value);
-    console.log(value > 100 ? 100 : value < 0 ? 0 : value);
     await konashi?.pwmWrite(props.pin, value);
   };
 

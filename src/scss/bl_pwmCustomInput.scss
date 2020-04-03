@@ -1,0 +1,25 @@
+@import "../../node_modules/rfs/scss.scss";
+@import "./el_sliderInput.scss";
+@import "./el_textInput.scss";
+
+.bl_inputCustom {
+  display: flex;
+  flex-direction: row;
+
+  &_duty {
+    flex-basis: 50%;
+    display: flex;
+    padding-top: 6px;
+  }
+
+  &_period {
+    flex-basis: 50%;
+    display: flex;
+    padding-top: 6px;
+  }
+
+  &_label {
+    margin-left: 5px;
+    margin-right: 2px;
+  }
+}

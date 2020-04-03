@@ -24,7 +24,7 @@ const PWM = () => {
           LED: 0 - 100 (<span>Duty/Period[%]</span>)
         </p>
         <p>
-          custom: 0 - 1300 (<span>Duty, Period[μsec]</span>)
+          custom: 50 - 2^32 (<span>Duty, Period[μsec]</span>)
         </p>
       </div>
     </div>

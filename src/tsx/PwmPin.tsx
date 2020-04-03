@@ -3,6 +3,7 @@ import { useState } from "preact/hooks";
 import Konashi from "@ux-xu/konashi-web-bluetooth";
 import PwmToggleBtn from "./PwmToggleBtn";
 import PwmLedInput from "./PwmLedInput";
+import PwmCustomInput from "./PwmCustomInput";
 
 const PwmPin = (props: { pin: number }) => {
   const [mode, setMode] = useState(Konashi.PWM_DISABLE);
@@ -30,11 +31,7 @@ const PwmPin = (props: { pin: number }) => {
     }
 
     if (m === Konashi.PWM_ENABLE) {
-      return (
-        <div className="bl_pwmPin_value">
-          <p>someday.</p>
-        </div>
-      );
+      return <PwmCustomInput pin={props.pin} />;
     }
   };
 
