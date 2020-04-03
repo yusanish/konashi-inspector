@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "parcel src/index.html --open",
-    "build": "rm docs/*; parcel build src/index.html --out-dir docs/ --public-url='/konashi-inspector'; touch docs/.nojekyll",
+    "build": "rm docs/*; parcel build src/index.html --out-dir docs/ --public-url='/konashi-inspector'; touch docs/.nojekyll; cp src/assets/ogp.png docs/;",
     "test": "jest"
   },
   "author": "Yusaku Nishiwaki",
